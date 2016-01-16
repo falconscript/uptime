@@ -1,4 +1,17 @@
-uptime
+# Local Network Uptime
+Forked uptime to allow graphical representations of device uptime on your local network.
+
+Uptime was originally made to monitor uptime of external servers' services only by a few protocols such as HTTP.
+
+I have modified uptime to use nmap to send an ARP ping and some packets to a few key ports to monitor and graph machines attached or active on a local network.
+This additional poller can also be used to monitor reachability or uptime for external servers.
+
+Checking out this repository, setting up the mongod instance, and starting everything is the same. This fork's only extra requirement is installing "nmap" and have it in the $PATH.
+The nature of network packets is that sometimes they get lost or are handled differently by different OSs/devices/wireless cards. Be sure to consider that machines may block these things.
+
+Below is the README.md for uptime from fzanitto. Instructions for installation, monitoring, and interpretation are the same as he has defined below:
+
+# uptime
 ======
 
 A remote monitoring application using Node.js, MongoDB, and Twitter Bootstrap.
@@ -8,7 +21,6 @@ A remote monitoring application using Node.js, MongoDB, and Twitter Bootstrap.
 
 You can watch a [demo screencast on Vimeo](https://vimeo.com/39302164).
 
-**Warning**: This application isn't actively maintained anymore. You can find many alternatives, from completely free to very cheap, in [this list of website monitoring services](http://www.supermonitoring.com/blog/the-updated-list-of-website-monitoring-services/).
 
 Features
 --------
